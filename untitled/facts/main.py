@@ -15,7 +15,7 @@ docs = loader.load_and_split(
 
 db = Chroma.from_documents(docs, embedding=embeddings, persist_directory="emb")
 
-results = db.similarity_search_with_score("what is an interesting English language?", k=2)
+results = db.similarity_search_with_score("what is an interesting English language?")
 for result in results:
     print("\n")
     print(result[1])
