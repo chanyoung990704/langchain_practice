@@ -1,8 +1,11 @@
+from abc import ABC
+
 from langchain.embeddings.base import Embeddings
 from langchain.vectorstores.chroma import Chroma
 from langchain.schema.retriever import BaseRetriever
 
-class RedundantFilterRetriever(BaseRetriever):
+
+class RedundantFilterRetriever(BaseRetriever, ABC):
     embeddings: Embeddings
     chroma: Chroma
 
