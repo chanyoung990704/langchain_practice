@@ -16,4 +16,4 @@ tools = [run_query_tool]
 agent = OpenAIFunctionsAgent(llm=chat, prompt=prompt, tools=tools)
 agent_executor = AgentExecutor(agent=agent, verbose=True, tools=tools)
 
-agent_executor("How many users in database?")
+agent_executor("How many shpping_address in database?")
