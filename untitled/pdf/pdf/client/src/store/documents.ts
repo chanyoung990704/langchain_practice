@@ -1,6 +1,6 @@
 // import axios from 'axios';
-import { writable } from 'svelte/store';
-import { api, getErrorMessage } from '$api';
+import {writable} from 'svelte/store';
+import {api, getErrorMessage} from '$api';
 
 export interface Document {
 	id: string;

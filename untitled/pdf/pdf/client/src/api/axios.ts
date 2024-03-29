@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addError } from '$s/errors';
+import {addError} from '$s/errors';
 
 interface ApiError {
 	message: string;

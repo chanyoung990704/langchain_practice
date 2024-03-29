@@ -1,6 +1,8 @@
 import uuid
-from app.web.db import db
+
 from langchain.schema.messages import AIMessage, HumanMessage, SystemMessage
+
+from app.web.db import db
 from .base import BaseModel
 
 

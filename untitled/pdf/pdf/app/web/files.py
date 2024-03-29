@@ -1,8 +1,10 @@
 import json
 import os
-import requests
 import tempfile
-from typing import Tuple, Dict, Any
+from typing import Tuple, Dict
+
+import requests
+
 from app.web.config import Config
 
 upload_url = f"{Config.UPLOAD_URL}/upload"

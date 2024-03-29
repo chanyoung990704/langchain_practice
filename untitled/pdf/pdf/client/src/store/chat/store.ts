@@ -1,6 +1,6 @@
-import { get } from 'svelte/store';
-import { writable } from '../writeable';
-import { api } from '$api';
+import {get} from 'svelte/store';
+import {writable} from '../writeable';
+import {api} from '$api';
 
 export interface Message {
 	id?: number;

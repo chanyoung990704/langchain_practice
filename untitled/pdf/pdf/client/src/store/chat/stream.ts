@@ -1,7 +1,7 @@
-import type { Message } from './store';
-import { set, store, getActiveConversation, insertMessageToActive } from './store';
-import { addError } from '$s/errors';
-import { getErrorMessage } from '$api';
+import type {Message} from './store';
+import {getActiveConversation, insertMessageToActive, set, store} from './store';
+import {addError} from '$s/errors';
+import {getErrorMessage} from '$api';
 
 const _addMessage = (message: Message) => {
 	insertMessageToActive(message);

@@ -1,5 +1,5 @@
-import type { PageLoad } from './$types';
-import { api, getErrorMessage } from '$api';
+import type {PageLoad} from './$types';
+import {api, getErrorMessage} from '$api';
 
 export const load = (async ({ params }) => {
 	try {
