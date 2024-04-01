@@ -1,9 +1,9 @@
 from flask import Blueprint, g, jsonify
-
-from app.web import files
-from app.web.db.models import Pdf
+from werkzeug.exceptions import Unauthorized
 from app.web.hooks import login_required, handle_file_upload, load_model
+from app.web.db.models import Pdf
 from app.web.tasks.embeddings import process_document
+from app.web import files
 
 bp = Blueprint("pdf", __name__, url_prefix="/api/pdfs")
 
@@ -26,8 +26,7 @@ def upload_file(file_id, file_path, file_name):
 
     pdf = Pdf.create(id=file_id, name=file_name, user_id=g.user.id)
 
-    # TODO: Defer this to be processed by the worker
-    process_document(pdf.id)
+    process_document.delay(pdf.id)
 
     return pdf.as_dict()
 
