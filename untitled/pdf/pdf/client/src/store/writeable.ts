@@ -1,5 +1,5 @@
-import {writable as base} from 'svelte/store';
-import produce, {enableMapSet} from 'immer';
+import { writable as base } from 'svelte/store';
+import produce, { enableMapSet } from 'immer';
 
 enableMapSet();
 

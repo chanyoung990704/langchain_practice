@@ -1,5 +1,5 @@
-import {get, writable} from 'svelte/store';
-import {api, getErrorMessage} from '$api';
+import { writable, get } from 'svelte/store';
+import { api, getErrorMessage } from '$api';
 
 export type User =
 	| {

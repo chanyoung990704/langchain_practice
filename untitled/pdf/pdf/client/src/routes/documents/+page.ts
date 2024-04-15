@@ -1,6 +1,6 @@
-import type {Document} from '$s/documents';
-import type {PageLoad} from './$types';
-import {api, getErrorMessage} from '$api';
+import type { Document } from '$s/documents';
+import type { PageLoad } from './$types';
+import { api, getErrorMessage } from '$api';
 
 export const load = (async () => {
 	try {

@@ -1,6 +1,6 @@
-import type {Message} from './store';
-import {insertMessageToActive, removeMessageFromActive, set, store} from './store';
-import {api, getErrorMessage} from '$api';
+import type { Message } from './store';
+import { store, set, insertMessageToActive, removeMessageFromActive } from './store';
+import { api, getErrorMessage } from '$api';
 
 const _addPendingMessage = (message: Message, pendingId: number) => {
 	insertMessageToActive(message);
